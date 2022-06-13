@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+}
+h1{
+    text-align: center;
+}
+#todo-container{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15vw;
+    width: 70%;
+    padding: 10px;
+    background-color: aliceblue;
+}
+#new-task textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+}
+#category-date-container{
+    display: flex;
+    justify-content: space-around;
+}
+#category-date-container select, input{
+    height: 3.2rem;
+    width: 35%;
+    border: none;
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+    background-color: lightgraSy;
+}
+#buttons-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+#buttons-container button{
+    margin-top: 15px;
+    height: 3rem;
+    width: 20%;
+    background-color: rgb(151, 151, 226);
+    color: white;
+}
+ul{
+    list-style: none;
+}
+.task-item{
+    display: flex;
+}
+.task-displayer{
+    width: 65%;
+}
+.category{
+    width: 15%;
+}
+.checkbox{
+    width: 15%;
+    display: flex;
+}
+.checkbox input{
+    height: 30%;
+    width: 30%;
+    align-self: center;
+}
+.delete{
+    width: 5%;
+    display: flex;
+    background-color: rgb(228, 105, 105);
+    justify-content: center;
+}
+.delete a{
+    align-self: center;
+}
+.category{
+    justify-self: center;
+    background-color: blueviolet;
+    color: white;
+    height: 80%;
+}
+ul li{
+    background-color: aqua;
+    margin-bottom: 5px;
+}

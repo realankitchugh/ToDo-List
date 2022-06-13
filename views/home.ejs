@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <script src="https://kit.fontawesome.com/4c7f7a95ea.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        
+        <div id="todo-container">
+            <h1><%=title%></h1>
+            <form action="/create-task" method="post">
+                <div id="new-task">
+                    <textarea  name="task" id="input-task" required placeholder="Add a New Task here" cols="60" rows="4"></textarea>
+                </div>
+                <div id="category-date-container">
+                    <select name="category" id="category-dropdown" >
+                        <option value="personal">Personal</option>
+                        <option value="business">Business</option>
+                        <option value="work">Work</option>
+                        <option value="home">Home</option>
+                    </select>
+                    <input name="date" type="date">
+                </div>
+                <div id="buttons-container">
+                    <button type="submit">Add Task</button>
+                    <button type="submit">Delete Tasks</button>
+                </div>
+            </form>
+            <div id="task-display">
+                <ul>
+                    <% for(let i of task_list){%>
+                    <li class="task-item">
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                        <div class="task-displayer">
+                            <p class="task-item"><%= i.task %></p>
+                            <p class="date-task"><%= i.date %></p>
+                        </div>
+                        <div class="category">
+                            <p class="category-task"><%= i.category %></p>
+                        </div>
+                        <div class="delete">
+                            <a href="/delete-task/?id=<%= i._id %>"><i class="fa fa-trash"></i></a>
+                        </div>
+                    </li> 
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
